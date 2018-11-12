@@ -10,5 +10,7 @@ form(action='/',method='POST')
       input#stop(type='submit', method='POST', action='/', value='stop', name='move')
       input#reset(type='submit', method='POST', action='/', value='startreset', name='move')
 container
-  #grid
-h1 #{signal}
+  div#grid
+      each val in display
+           != val
+           br
