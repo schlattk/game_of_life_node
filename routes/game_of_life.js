@@ -3,14 +3,13 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', {});
+  var signal = req.query.move;
+  res.render('game_of_life', {signal : signal});
 });
 
 router.post('/', function(req, res, next){
-  console.log(req.body);
-  var signal = req.body.move;
-  res.redirect("/game_of_life/?move=" + signal)
-
+  //res.render('game_of_life',{})
+  res.send('Wtf');
 });
 
 module.exports = router;

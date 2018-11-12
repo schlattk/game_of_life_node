@@ -2,7 +2,7 @@ doctype html
 
 head
   meta(charset='utf-8')
-  link(rel='stylesheet', href='./stylesheets/style.css')
+  link(rel='stylesheet', href='../stylesheets/style.css')
   title Game_of_Life
 h1 GAME OF LIFE
 form(action='/',method='POST')
@@ -11,3 +11,4 @@ form(action='/',method='POST')
       input#reset(type='submit', method='POST', action='/', value='startreset', name='move')
 container
   #grid
+h1 #{signal}
