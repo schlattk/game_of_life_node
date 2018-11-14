@@ -1,26 +1,25 @@
+'use strict';
 var Game = require('../models/game.js');
 
-
-'use strict';
-
 const initializer = (function(){
+  let game1;
 
-  let game = "";
+  let init = function(){
 
-  let init = function(x,y){
+    game1 = new Game(40,40);
+    game1.seed(0.65);
+    return game1.print();
+  };
 
-        game = new Game(x,y);
-        game.seed(0.5);
-        game.print();
-      };
+  let one_step = function(){
+    game1.move();
+    return game1.print();
+  };
 
-  let functionCall = function(){
-        game.move();
-        game.print();
-  }
-      return{init:init,
-             call:functionCall
-      };
+  return{
+      init:init,
+      one_step: one_step
+    }
 })();
 
 module.exports = initializer;

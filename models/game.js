@@ -1,11 +1,8 @@
 'use strict';
 
-var initializer = require('./initializer.js');
 var fieldsToCheck = require('./fieldsToCheck.js');
 var randomizer = require('./randomizer.js');
 var scanner = require('./scanner.js');
-var printer = require('./printer.js');
-
 
 class Game {
 
@@ -42,15 +39,15 @@ class Game {
   print(){
     let newGrid = new Array(this.grid.length);
     for(let i = 0; i < this.grid[0].length; i ++){newGrid[i] = new Array(this.grid[0].length)};
-    let red_element = '<svg class = "red" width="15" height="15"><rect width="15" height="15"></svg>';
-    let blue_element = '<svg class = "blue" width="15" height="15"><rect width="15" height="15"></svg>';
+    let red_element = "<svg class='red' width='15' height='15'><rect width='15' height='15'></svg>";
+    let blue_element = "<svg class= 'blue' width='15' height='15'><rect width='15' height='15'></svg>";
     this.grid.forEach((item, i) => {for(let j = 0; j < this.grid.length; j++){
                                   if(this.grid[i][j] === "X"){newGrid[i][j] = red_element;}
                                   else {newGrid[i][j] = blue_element;}
                                   }}
                     );
     let finalGrid = newGrid.map(item => item.join(""));
-    return finalGrid
+    return finalGrid;
   };
 
 };

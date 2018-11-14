@@ -1,22 +1,28 @@
 var express = require('express');
 var router = express.Router();
-var game_of_life_controller = require('../controllers/game_of_life_controller');
 var Game = require('../models/game.js');
-// var initializer = require('../models/initializer.js');
-// var fieldsToCheck = require('../models/fieldsToCheck.js');
-// var randomizer = require('../models/randomizer.js');
-// var scanner = require('../models/scanner.js');
+var initializer = require('../models/initializer.js')
+var startStop= require('../models/startstop.js');
+var socketApi = require('../socketApi');
+var io = socketApi.io;
 
 router.get('/', function(req, res, next) {
   var signal = req.query.move;
-  var game = new Game(40,40);
-  game.seed(0.65);
-  var display = game.print();
-  res.render('game_of_life',{display:display});
+  var display;
+  if (signal === 'startreset'){
+    display = initializer.init();
+    res.render('game_of_life',{display:display});
+  }
+  else if (signal === 'run'){
+      startStop.run();
+    }
+  else if (signal === 'stop')
+
+    startStop.stop();
 });
 
 router.post('/', function(req, res, next){
-  //res.render('game_of_life',{})
+
   res.send('Wtf');
 });
 

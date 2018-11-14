@@ -1,4 +1,5 @@
 'use strict';
+var fieldsToCheck = require('../models/fieldsToCheck.js');
 
 const scanner = (function(){
   let scan = function(grid,x,y){

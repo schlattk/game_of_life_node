@@ -14,3 +14,13 @@ container
       each val in display
            != val
            br
+p(id="data")
+ script(src="/socket.io/socket.io.js")
+ script.
+   var socket = io();
+
+   socket.on('data', function(data) {
+      let grid = document.getElementById("grid");
+      grid.innerHTML = "";
+      data.forEach((array) =>{grid.insertAdjacentHTML('afterbegin',array + "<br>")});
+   });
