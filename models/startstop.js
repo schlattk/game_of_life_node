@@ -1,8 +1,22 @@
 'use strict';
 var Game = require('../models/game.js');
 var initializer = require('../models/initializer.js')
-var socketApi = require('../socketApi');
-var io = socketApi.io;
+// var socketApi = require('../socketApi');
+// var io = socketApi.io;
+
+var socket_io = require('socket.io');
+var io = socket_io();
+var socketApi = {};
+socketApi.io = io;
+var id;
+io.on('connection', function(socket){
+    console.log('A user connected');
+    id = socket.id;
+});
+
+socketApi.sendNotification = function() {
+    io.sockets.emit('hello', {msg: 'Hello World!'});
+}
 
 const startStop = (function(){
   let starter;
@@ -10,8 +24,9 @@ const startStop = (function(){
   let run = function() {
     starter = setInterval(function() {
       field = initializer.one_step();
-      var id;
-      io.emit('data', field);
+      // console.log(id);
+      // io.to(id).emit('data', field);
+
       }, 1000);
   };
 
@@ -23,4 +38,5 @@ const startStop = (function(){
     };
 })();
 
-module.exports = startStop;
+exports.startStop = startStop;
+exports.socketApi = socketApi;

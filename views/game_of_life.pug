@@ -5,10 +5,10 @@ head
   link(rel='stylesheet', href='../stylesheets/style.css')
   title Game_of_Life
 h1 GAME OF LIFE
-form(action='/',method='POST')
+form#form(action='/',method='POST')
       input#start(type='submit', method='POST', action='/', value='run', name='move')
       input#stop(type='submit', method='POST', action='/', value='stop', name='move')
-      input#reset(type='submit', method='POST', action='/', value='startreset', name='move')
+      input#reset(type='submit',method='POST',action='/', value='startreset', name='move')
 container
   div#grid
       each val in display
@@ -17,10 +17,18 @@ container
 p(id="data")
  script(src="/socket.io/socket.io.js")
  script.
-   var socket = io();
+  var starter;
+    var run = document.getElementById("start");
+    var stop = document.getElementById("stop");
+    var setStarter = function() {
+      starter = setInterval(clicker, 2000);
+        };
+    var clicker = function(){
+      run.click();
+    }
+    var stopStarter = function() {
+      clearInterval(starter);
+    }
 
-   socket.on('data', function(data) {
-      let grid = document.getElementById("grid");
-      grid.innerHTML = "";
-      data.forEach((array) =>{grid.insertAdjacentHTML('afterbegin',array + "<br>")});
-   });
+    run.addEventListener('click',setStarter());
+    stop.addEventListener('click',stopStarter);
