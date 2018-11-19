@@ -7,7 +7,6 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next){
-  console.log(req.body);
   var signal = req.body.move;
   res.redirect("/game_of_life/?move=" + signal)
 

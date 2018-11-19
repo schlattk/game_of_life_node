@@ -2,9 +2,6 @@ var express = require('express');
 var router = express.Router();
 var Game = require('../models/game.js');
 var initializer = require('../models/initializer.js')
-var method = require('../models/startstop.js');
-var socketApi = require('../socketApi');
-var io = socketApi.io;
 
 router.get('/', function(req, res, next) {
   var signal = req.query.move;

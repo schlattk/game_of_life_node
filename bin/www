@@ -34,9 +34,9 @@ server.on('listening', onListening);
  */
 
  // var socketApi = require('../socketApi');
- var socketApi = require('../models/startstop.js')
- var io = socketApi.socketApi.io;
- io.attach(server);
+ // var socketApi = require('../models/startstop.js')
+ // var io = socketApi.socketApi.io;
+ // io.attach(server);
 
 
 
