@@ -6,11 +6,11 @@ head
   title Game_of_Life
 h1 GAME OF LIFE
 form#form(action='/',method='POST')
-      input#start(type='submit', method='POST', action='/', value='run', name='move')
+      input(id='start' type='submit', method='POST', action='/', value='run', name='move')
       input#stop(type='submit', method='POST', action='/', value='stop', name='move')
       input#reset(type='submit',method='POST',action='/', value='startreset', name='move')
 container
-  div#grid
+  div(id='grid')
       each val in display
            != val
            br
