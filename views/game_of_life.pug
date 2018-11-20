@@ -15,18 +15,17 @@ container
            != val
            br
 script.
-  var starter;
-    var run = document.getElementById("start");
-    var stop = document.getElementById("stop");
-    var setStarter = function() {
-      starter = setInterval(clicker, 2000);
-        };
-    var clicker = function(){
-      run.click();
+  let starter
+  const run = document.getElementById('start')
+  const stop = document.getElementById('stop')
+  const setStarter = function () {
+    starter = setInterval(clicker, 2000)
     }
-    var stopStarter = function() {
-      clearInterval(starter);
-    }
-
-    run.addEventListener('click',setStarter());
-    stop.addEventListener('click',stopStarter);
+  const clicker = function () {
+    run.click()
+  }
+  const stopStarter = function () {
+    clearInterval(starter)
+  }
+  run.addEventListener('click', setStarter())
+  stop.addEventListener('click', stopStarter)
