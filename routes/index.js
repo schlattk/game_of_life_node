@@ -5,6 +5,9 @@ router.get('/', function (req, res, next) {
 })
 router.post('/', function (req, res, next) {
   var signal = req.body.move
-  res.redirect('/game_of_life/?move=' + signal)
+  if (signal === 'startreset' || signal === 'run')
+    { res.redirect('/game_of_life/?move=' + signal) }
+  else if (signal === 'make')
+    { res.redirect('/game_of_life/make/?move=' + signal) }
 })
 module.exports = router

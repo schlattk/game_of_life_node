@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1542742704227" clover="3.2.0">
-  <project timestamp="1542742704227" name="All files">
+<coverage generated="1542894345562" clover="3.2.0">
+  <project timestamp="1542894345562" name="All files">
     <metrics statements="60" coveredstatements="60" conditionals="20" coveredconditionals="19" methods="20" coveredmethods="20" elements="100" coveredelements="99" complexity="0" loc="60" ncloc="60" packages="1" files="5" classes="5">
       <file name="fieldsToCheck.js" path="/Users/konradschlatte/new_projects/game_of_life_server/models/fieldsToCheck.js">
         <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>

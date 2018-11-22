@@ -13,8 +13,15 @@ router.get('/', function (req, res, next) {
       display = initializer.oneStep()
       res.render('game_of_life', { display: display })
       break
-    default:
+    case 'stop':
       console.log('stop')
+      break
+    default:
+      res.send('please go back to homepage')
+      break
   }
+})
+router.get('/make', function(req, res, next) {
+  res.send('Hello Maker');
 })
 module.exports = router
