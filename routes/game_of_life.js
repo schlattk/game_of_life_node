@@ -21,7 +21,9 @@ router.get('/', function (req, res, next) {
       break
   }
 })
-router.get('/make', function(req, res, next) {
-  res.send('Hello Maker');
+router.get('/make/', function(req, res, next) {
+  let display;
+  display = initializer.blank()
+  res.render('make', { display: display })
 })
 module.exports = router

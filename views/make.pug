@@ -1,0 +1,34 @@
+doctype html
+
+head
+  meta(charset='utf-8')
+  link(rel='stylesheet',href='http://localhost:3000/stylesheets/style.css')
+  title Game_of_Life
+h1 GAME OF LIFE
+form#form(action='/',method='POST')
+      input(id='start' type='submit', method='POST', action='/', value='run', name='move')
+      input#stop(type='submit', method='POST', action='/', value='stop', name='move')
+container
+  div(id='grid')
+      each val in display
+           != val
+           br
+script.
+  const eventManager = (function () {
+    const grid = document.getElementById('grid');
+    grid.addEventListener('click', function (event) {
+    let aim = event.target;
+    let el = aim.getAttribute('class');
+    el === "red" ? aim.setAttribute("class", "blue") : aim.setAttribute("class", "red");
+    });
+  })();
+
+  let elem = grid.getElementsByTagName('svg')[41].className.baseVal;
+  console.log(elem);
+
+//  elements = grid.getElementsByTagName('svg');
+//  HTMLCollection(1600) [svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, svg, //svg, svg, svg, svg, svg, svg, …]
+//  elements[0].className;
+//  SVGAnimatedString {baseVal: "blue", animVal: "blue"}
+//  elements[0].className.baseVal;
+//  "blue"

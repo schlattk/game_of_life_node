@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1542894345562" clover="3.2.0">
-  <project timestamp="1542894345562" name="All files">
-    <metrics statements="60" coveredstatements="60" conditionals="20" coveredconditionals="19" methods="20" coveredmethods="20" elements="100" coveredelements="99" complexity="0" loc="60" ncloc="60" packages="1" files="5" classes="5">
+<coverage generated="1542897552488" clover="3.2.0">
+  <project timestamp="1542897552488" name="All files">
+    <metrics statements="64" coveredstatements="64" conditionals="20" coveredconditionals="19" methods="21" coveredmethods="21" elements="105" coveredelements="104" complexity="0" loc="64" ncloc="64" packages="1" files="5" classes="5">
       <file name="fieldsToCheck.js" path="/Users/konradschlatte/new_projects/game_of_life_server/models/fieldsToCheck.js">
         <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
         <line num="2" count="4" type="stmt"/>
@@ -17,13 +17,13 @@
         <metrics statements="27" coveredstatements="27" conditionals="12" coveredconditionals="11" methods="10" coveredmethods="10"/>
         <line num="2" count="4" type="stmt"/>
         <line num="3" count="4" type="stmt"/>
-        <line num="6" count="15" type="stmt"/>
-        <line num="7" count="15" type="stmt"/>
-        <line num="8" count="15" type="stmt"/>
-        <line num="9" count="212" type="stmt"/>
-        <line num="12" count="11" type="stmt"/>
-        <line num="13" count="182" type="stmt"/>
-        <line num="14" count="5404" type="stmt"/>
+        <line num="6" count="17" type="stmt"/>
+        <line num="7" count="17" type="stmt"/>
+        <line num="8" count="17" type="stmt"/>
+        <line num="9" count="292" type="stmt"/>
+        <line num="12" count="13" type="stmt"/>
+        <line num="13" count="262" type="stmt"/>
+        <line num="14" count="8604" type="stmt"/>
         <line num="20" count="3" type="stmt"/>
         <line num="21" count="3" type="stmt"/>
         <line num="22" count="50" type="stmt"/>
@@ -32,36 +32,40 @@
         <line num="25" count="3" type="stmt"/>
         <line num="26" count="50" type="stmt"/>
         <line num="27" count="1650" type="cond" truecount="9" falsecount="1"/>
-        <line num="33" count="6" type="stmt"/>
-        <line num="34" count="164" type="stmt"/>
-        <line num="35" count="6" type="stmt"/>
-        <line num="36" count="6" type="stmt"/>
-        <line num="37" count="6" type="stmt"/>
-        <line num="38" count="164" type="stmt"/>
-        <line num="39" count="6408" type="cond" truecount="2" falsecount="0"/>
-        <line num="43" count="164" type="stmt"/>
-        <line num="44" count="6" type="stmt"/>
+        <line num="33" count="8" type="stmt"/>
+        <line num="34" count="244" type="stmt"/>
+        <line num="35" count="8" type="stmt"/>
+        <line num="36" count="8" type="stmt"/>
+        <line num="37" count="8" type="stmt"/>
+        <line num="38" count="244" type="stmt"/>
+        <line num="39" count="9608" type="cond" truecount="2" falsecount="0"/>
+        <line num="43" count="244" type="stmt"/>
+        <line num="44" count="8" type="stmt"/>
         <line num="47" count="4" type="stmt"/>
       </file>
       <file name="initializer.js" path="/Users/konradschlatte/new_projects/game_of_life_server/models/initializer.js">
-        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="8" count="3" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
       </file>
       <file name="randomizer.js" path="/Users/konradschlatte/new_projects/game_of_life_server/models/randomizer.js">
         <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <line num="2" count="5" type="stmt"/>
         <line num="3" count="5" type="stmt"/>
-        <line num="4" count="5406" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="8606" type="cond" truecount="2" falsecount="0"/>
         <line num="6" count="5" type="stmt"/>
         <line num="8" count="5" type="stmt"/>
       </file>

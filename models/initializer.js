@@ -11,9 +11,15 @@ const initializer = (function () {
     game1.move()
     return game1.print()
   }
+  let blank = function () {
+    game1 = new Game(40, 40)
+    game1.seed(1);
+    return game1.print()
+  }
   return {
     init: init,
-    oneStep: oneStep
+    oneStep: oneStep,
+    blank: blank
   }
 })()
 module.exports = initializer
